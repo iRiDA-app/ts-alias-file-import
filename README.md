@@ -1,6 +1,9 @@
-# ts-alias-file-import
+# @irida-app/ts-alias-file-import
 
-`ts-alias-file-import` is a utility for importing files using TypeScript's `paths` aliases defined in `tsconfig.json`. It resolves alias paths and reads the corresponding files, returning them as Buffers.
+`@irida-app/ts-alias-file-import` is a utility for importing files using TypeScript's `paths` aliases defined in `tsconfig.json`. It resolves alias paths and reads the corresponding files, returning them as Buffers.
+
+### Note:
+This package is particularly useful for server-side file imports in API routes when working with **Next.js App Router** or **Expo Router**. It helps resolve file paths in your application structure by leveraging TypeScript's aliasing system.
 
 ## Features
 - Resolves file paths based on TypeScript `paths` and `baseUrl` configuration.
@@ -10,7 +13,7 @@
 ## Installation
 
 ```bash
-npm install ts-alias-file-import
+npm install @irida-app/ts-alias-file-import
 ```
 
 ## Usage
@@ -28,10 +31,10 @@ First, make sure you have path aliases configured in your `tsconfig.json`:
 }
 ```
 
-Then, use `ts-alias-file-import` to load a file using its alias:
+Then, use `@irida-app/ts-alias-file-import` to load a file using its alias:
 
 ```ts
-import { importFile } from 'ts-alias-file-import';
+import { importFile } from '@irida-app/ts-alias-file-import';
 
 async function loadFile() {
   const fileBuffer = await importFile('@/components/MyComponent.tsx');

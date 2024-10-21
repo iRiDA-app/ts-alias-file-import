@@ -10,9 +10,11 @@
 
     // Bundler mode
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    // "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
-    "noEmit": true,
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    "outDir": "./build",
 
     // Best practices
     "strict": true,
@@ -22,6 +24,10 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+
+    // Generate declaration files
+    "declaration": true,
+    "declarationDir": "./build"
   }
 }
